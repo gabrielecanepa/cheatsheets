@@ -33,7 +33,11 @@ An HTTP request containes just an **HTTP method** (aka verb or URL) and **HTTP h
 ```javascript
 // GET request
 fetch(url).then((response) => {
-  // Do something once HTTP response is received
+  // Do something once HTTP response is received, for example
+  .then(response => response.json()) // to parse the response
+    .then((data) => {
+      console.log(data); // `data` is now a JS object
+    });
 });
 ```
 
