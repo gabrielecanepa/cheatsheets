@@ -22,6 +22,17 @@ node        # Gives a REPL to execute JS code
 # Ctrl-C twice to exit
 ```
 
+## AJAX
+
+The modern technique used to make an **AJAX GET request** is `fecth`:
+
+```javascript
+// GET request
+fetch(url).then((response) => {
+  // Do something once HTTP response is received
+});
+```
+
 
 
 
