@@ -24,13 +24,33 @@ node        # Gives a REPL to execute JS code
 
 ## AJAX
 
-The modern technique used to make an **AJAX GET request** is `fecth`:
+The modern technique used to make an **AJAX GET request** is `fetch`.
+
+### GET request
+
+An HTTP request containes just an **HTTP method** (aka verb or URL) and **HTTP headers**.
 
 ```javascript
 // GET request
 fetch(url).then((response) => {
   // Do something once HTTP response is received
 });
+```
+
+### POST request
+
+In a POST request there is still an **HTTP method** and **HTTP headers**, but there is also an **HTTP body**, containing 'new' informations sent by the user, usually by a form submission.
+
+The _HTTP headers_ are communicating the server that a JSON object is sent by the user, the _HTTP body_ contains the actual JSON object.
+
+```javascript
+fetch(url, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(a_js_object)
+})
 ```
 
 
