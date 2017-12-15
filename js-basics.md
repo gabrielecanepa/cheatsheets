@@ -28,7 +28,7 @@ The modern technique used to make an **AJAX GET request** is `fetch`.
 
 ### GET request
 
-An HTTP request containes just an **HTTP method** (aka verb or URL) and **HTTP headers**.
+An HTTP request containes just an **HTTP method** (aka verb or URL) and **HTTP headers** (containing user-agent, referer, cookies, ...).
 
 ```javascript
 // GET request
