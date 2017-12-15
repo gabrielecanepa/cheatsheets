@@ -10,6 +10,10 @@ It was published in June 2015 and modern browsers implement 95%+ of it.
 
 ### Node.js
 
+**Node.js** is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side.
+
+```
+
 
 
 
