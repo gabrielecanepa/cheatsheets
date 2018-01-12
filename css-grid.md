@@ -9,8 +9,8 @@
 ```css
 .container {
   display: grid | inline-grid; /* Also subgrid is avaiable */
-  grid-template-rows: -line_name- -row_size- .. | repeat(-integer-, -rows_size- -lines_name-);
-  grid-template-columns: -line_name- -column_size- .. | repeat(-integer-, -columns_size- -lines_name-);
+  grid-template-rows: <line-name> <row_size> .. | repeat(<integer>, <rows-size> <lines-name>);
+  grid-template-columns: <line-name> <column-size> .. | repeat(<integer>, <columns-size> <lines-name>);
   grid-template: <grid-template-rows> / <grid-template-columns>;
 }
 
@@ -23,11 +23,11 @@
 
 ```css
 .container {
-  grid-template-areas: "-area_name- | . | none"
+  grid-template-areas: "<area-name> | . | none"
                        "..";
 
-  grid-row-gap: -lines_size-;
-  grid-column-gap: -lines_size-;
+  grid-row-gap: <lines-size>;
+  grid-column-gap: <lines-size>;
   grid-gap: <grid-column-gap> <grid-row-gap>;
 
   justify-items: start | end | center | stretch;
@@ -35,18 +35,18 @@
   justify-content: start | end | center | stretch | space-around | space-between;
   align-content: start | end | center | stretch | space-around | space-between;
 
-  grid-auto-rows: -rows_size-;
-  grid-auto-columns: -columns_size-;
+  grid-auto-rows: <rows-size>;
+  grid-auto-columns: <columns-size>;
   grid-auto-flow: row | column | row dense | column dense; /* default is row */
 
   grid: none | <grid-template-rows> / <grid-template-columns> | <grid-auto-flow> [<grid-auto-rows> [/ <grid-auto-columns>]];
 }
 
 .item {
-  grid-row-start: -integer- | span -integer- | -name- | span -name- | auto;
-  grid-row-end: -integer- | span -integer- | -name- | span -name- | auto;
-  grid-column-start: -integer- | span -integer- | -name- | span -name- | auto;
-  grid-column-end: -integer- | span -integer- | -name- | span -name- | auto;
+  grid-row-start: <integer> | span <integer> | <name> | span <name> | auto;
+  grid-row-end: <integer> | span <integer> | <name> | span <name> | auto;
+  grid-column-start: <integer> | span <integer> | <name> | span <name> | auto;
+  grid-column-end: <integer> | span <integer> | <name> | span <name> | auto;
   grid-row: <grid-row-start> / <grid-row-end>;
   grid-column: <grid-column-start> / <grid-column-end>;
 
