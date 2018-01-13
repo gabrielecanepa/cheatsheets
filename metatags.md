@@ -1,9 +1,4 @@
-# HEAD
-
-[![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![Contributors](https://img.shields.io/github/contributors/joshbuchea/head.svg)](https://github.com/joshbuchea/HEAD/graphs/contributors)
-
-A list of everything that \*could\* go in the `<head>` of your document
+# Metatags
 
 ## Table of Contents
 
@@ -44,20 +39,14 @@ A list of everything that \*could\* go in the `<head>` of your document
 
 ## Recommended Minimum
 
-Below are the essential elements for any web document (websites/apps):
-
 ```html
 <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- † -->
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!--
   The above 3 meta tags *must* come first in the <head>
   to consistently ensure proper document rendering.
   Any other head element should come *after* these tags.
-
-  † Use the content="ie-edge" tag if your project
-    supports Internet Explorer prior to version 11.
-
  -->
 <title>Page Title</title>
 ```
@@ -68,31 +57,25 @@ Below are the essential elements for any web document (websites/apps):
 
 Valid `<head>` elements include `meta`, `link`, `title`, `style`, `script`, `noscript`, and `base`.
 
-These elements provide information for how a document should be perceived, and rendered, by web technologies. e.g. browsers, search engines, bots, etc.
 
 ``` html
-<!--
-  Set the character encoding for this document, so that
-  all characters within the UTF-8 space (such as emoji)
-  are rendered correctly.
--->
+<!-- In the head: -->
+
+<!-- Meta -->
 <meta charset="utf-8">
 
-<!-- Set the document's title -->
+<!-- Title -->
 <title>Page Title</title>
 
-<!-- Set the base URL for all relative URLs within the document -->
+<!-- Base -->
 <base href="http://example.com/page.html">
 
-<!-- Link to an external CSS file -->
+<!-- Link -->
 <link rel="stylesheet" href="styles.css">
 
-<!-- Used for adding in-document CSS -->
-<style>
-  /* ... */
-</style>
+<!-- At the bottom of the body: -->
 
-<!-- JavaScript & No-JavaScript tags -->
+<!-- Script and Noscript -->
 <script src="script.js"></script>
 <script>
   // function(s) go here
@@ -107,40 +90,31 @@ These elements provide information for how a document should be perceived, and r
 ## Meta
 
 ``` html
-<!--
-  The following 3 meta tags *must* come first in the <head>
-  to consistently ensure proper document rendering.
-  Any other head element should come *after* these tags.
--->
+<!-- Recommended minimum -->
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!--
-  Allows control over where resources are loaded from.
-  Place as early in the <head> as possible, as the tag
-  only applies to resources that are declared after it.
--->
+<!-- Control over where resources are loaded from, applied to resources that are declared after it. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
 
-<!-- Name of web application (only should be used if the website is used as an app) -->
+<!-- Name of web application (only if used as an app) -->
 <meta name="application-name" content="Application Name">
 
-<!-- Short description of the document (limit to 150 characters) -->
-<!-- This content *may* be used as a part of search engine results. -->
+<!-- Short description of the document (150 characters) -->
 <meta name="description" content="A description of the page">
 
-<!-- Control the behavior of search engine crawling and indexing -->
+<!-- Search engine crawling and indexing -->
 <meta name="robots" content="index,follow"><!-- All Search Engines -->
 <meta name="googlebot" content="index,follow"><!-- Google Specific -->
 
-<!-- Tells Google not to show the sitelinks search box -->
+<!-- Don't show Google sitelinks search box -->
 <meta name="google" content="nositelinkssearchbox">
 
-<!-- Tells Google not to provide a translation for this document -->
+<!-- Don't provide Google translation -->
 <meta name="google" content="notranslate">
 
-<!-- Verify website ownership -->
+<!-- Ownership -->
 <meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
 <meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
 <meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
@@ -148,28 +122,28 @@ These elements provide information for how a document should be perceived, and r
 <meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
 <meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
 
-<!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->
+<!-- Software used to build the document -->
 <meta name="generator" content="program">
 
-<!-- Short description of your document's subject -->
-<meta name="subject" content="your document's subject">
+<!-- Subject -->
+<meta name="subject" content="Your document's subject">
 
-<!-- Gives a general age rating based on the document's content -->
+<!-- Age rating -->
 <meta name="rating" content="General">
 
-<!-- Allows control over how referrer information is passed -->
+<!-- Referrer informations -->
 <meta name="referrer" content="no-referrer">
 
-<!-- Disable automatic detection and formatting of possible phone numbers -->
+<!-- Phone numbers -->
 <meta name="format-detection" content="telephone=no">
 
-<!-- Completely opt out of DNS prefetching by setting to "off" -->
+<!-- DNS prefetching -->
 <meta http-equiv="x-dns-prefetch-control" content="off">
 
-<!-- Stores a cookie on the client web browser for identification purposes -->
+<!-- Cookies -->
 <meta http-equiv="set-cookie" content="name=value; expires=date; path=url">
 
-<!-- Specifies the document to appear in a specific frame -->
+<!-- Frame -->
 <meta http-equiv="Window-Target" content="_value">
 
 <!-- Geo tags -->
@@ -181,18 +155,16 @@ These elements provide information for how a document should be perceived, and r
 
 - 📖 [Meta tags that Google understands](https://support.google.com/webmasters/answer/79812?hl=en)
 - 📖 [WHATWG Wiki: MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions)
-- 📖 [ICBM on Wikipedia](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
-- 📖 [Geotagging on Wikipedia](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
 
 **[⬆ back to top](#table-of-contents)**
 
 ## Link
 
 ``` html
-<!-- Points to an external stylesheet -->
+<!-- External stylesheet -->
 <link rel="stylesheet" href="http://example.com/styles.css">
 
-<!-- Helps prevent duplicate content issues -->
+<!-- Prevent duplicate issues -->
 <link rel="canonical" href="http://example.com/2010/06/9-things-to-do-before-entering-social-media.html">
 
 <!-- Used to be included before the icon link, but it has been deprecated -->
@@ -601,39 +573,8 @@ Example:
 
 ## Contributing
 
-**Open an issue or a pull request to suggest changes or additions.**
+### Author
 
-### Guide
-
-The **HEAD** repository consists of two branches:
-
-#### 1. `master`
-
-This branch consists of the `README.md` file that is automatically reflected on the [gethead.info](https://gethead.info/) website. All changes to the content of the cheat sheet as such should be directed to this file.
-
-Please follow these steps for pull requests:
-
-- Modify only one tag, or one related set of tags at a time
-- Use double quotes on attributes
-- Don't include a trailing slash in self-closing elements — the HTML5 spec says they're optional
-- Consider including a link to documentation that supports your change
-
-#### 2. `gh-pages`
-
-This branch is responsible for the [gethead.info](https://gethead.info/) website. We use [Jekyll](https://jekyllrb.com/) to deploy the `README.md` Markdown file through [GitHub Pages](https://pages.github.com/). All website related modifications must be directed here.
-
-You may want to go through the [Jekyll Docs](https://jekyllrb.com/docs/home/) and understand how Jekyll works before working on this branch.
-
-### Contributors
-
-Check out all the super awesome [contributors](https://github.com/joshbuchea/HEAD/graphs/contributors).
-
-## Author
-
-**[Josh Buchea](https://joshbuchea.com/)**
-
-## License
-
-[![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+**[Josh Buchea](https://joshbuchea.com/)**, full version on [Github](https://github.com/joshbuchea/HEAD/blob/master/README.md#meta).
 
 **[⬆ back to top](#table-of-contents)**
