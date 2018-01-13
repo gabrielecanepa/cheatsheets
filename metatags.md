@@ -4,10 +4,10 @@
 
 - [Template](#template)
 - [Recommended Minimum](#recommended-minimum)
+- [Elements](#elements)
 - [In Deep](#in-deep)
-  - [Elements](#elements)
-    - [Meta](#meta)
-    - [Link](#link)
+  - [Meta](#meta)
+  - [Link](#link)
   - [Favicons](#favicons)
   - [Social](#social)
     - [Facebook Open Graph](#facebook-open-graph-and-instant-articles)
@@ -84,11 +84,7 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-## In Deep
-
-For a complete reference [click here](https://github.com/joshbuchea/HEAD).
-
-### Elements
+## Elements
 
 Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `script` and `noscript`.
 
@@ -124,7 +120,11 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 
 **[⬆ back to top](#table-of-contents)**
 
-#### Meta
+## In Deep
+
+For a complete reference [click here](https://github.com/joshbuchea/HEAD).
+
+### Meta
 
 ``` html
 <!-- Recommended minimum -->
@@ -193,9 +193,7 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 - 📖 [Meta tags that Google understands](https://support.google.com/webmasters/answer/79812?hl=en)
 - 📖 [WHATWG Wiki: MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions)
 
-**[⬆ back to top](#table-of-contents)**
-
-#### Link
+### Link
 
 ``` html
 <!-- External stylesheet -->
@@ -272,8 +270,6 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 <link rel="preload" href="image.png" as="image">
 ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ### Favicons
 
 ``` html
@@ -285,8 +281,6 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 - 📖 [Favicon generator](https://realfavicongenerator.net/)
 - 📖 [All about favicons (and touch icons)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
 - 📖 [Favicon cheatsheet](https://github.com/audreyr/favicon-cheat-sheet)
-
-**[⬆ back to top](#table-of-contents)**
 
 ### Social
 
@@ -350,8 +344,6 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 ```
 
 - 📖 [oEmbed format](http://oembed.com/)
-
-**[⬆ back to top](#table-of-contents)**
 
 ### Browsers / Platforms
 
@@ -472,8 +464,6 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 ```
 
 - 📖 [App Links](http://applinks.org/documentation/)
-
-**[⬆ back to top](#table-of-contents)**
 
 ### Browsers (Chinese)
 
