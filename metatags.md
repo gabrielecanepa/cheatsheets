@@ -108,10 +108,10 @@ Valid `<head>` elements include `meta`, `link`, `title`, `style`, `script`, `nos
 <meta name="robots" content="index,follow"><!-- All Search Engines -->
 <meta name="googlebot" content="index,follow"><!-- Google Specific -->
 
-<!-- Don't show Google sitelinks search box -->
+<!-- Google sitelinks search box -->
 <meta name="google" content="nositelinkssearchbox">
 
-<!-- Don't provide Google translation -->
+<!-- Google translation -->
 <meta name="google" content="notranslate">
 
 <!-- Ownership -->
@@ -164,60 +164,60 @@ Valid `<head>` elements include `meta`, `link`, `title`, `style`, `script`, `nos
 <!-- External stylesheet -->
 <link rel="stylesheet" href="http://example.com/styles.css">
 
-<!-- Prevent duplicate issues -->
+<!-- Duplicate issues -->
 <link rel="canonical" href="http://example.com/2010/06/9-things-to-do-before-entering-social-media.html">
 
-<!-- Used to be included before the icon link, but it has been deprecated -->
+<!-- Shortlink (deprecated) -->
 <link rel="shortlink" href="http://example.com/?p=42">
 
-<!-- Links to an AMP HTML version of the current document -->
+<!-- AMP HTML version -->
 <link rel="amphtml" href="http://example.com/path/to/amp-version.html">
 
-<!-- Links to a JSON file that specifies "installation" credentials for the web applications -->
+<!-- JSON for "installation" credentials for the web applications -->
 <link rel="manifest" href="manifest.json">
 
-<!-- Links to information about the author(s) of the document -->
+<!-- Author -->
 <link rel="author" href="humans.txt">
 
-<!-- Refers to a copyright statement that applies to the link's context -->
-<link rel="license" href="copyright.html">
-
-<!-- Gives a reference to a location in your document that may be in another language -->
-<link rel="alternate" href="https://es.example.com/" hreflang="es">
-
-<!-- Provides information about an author or another person -->
+<!-- Author/people -->
 <link rel="me" href="https://google.com/profiles/thenextweb" type="text/html">
 <link rel="me" href="mailto:name@example.com">
 <link rel="me" href="sms:+15035550125">
 
-<!-- Links to a document that describes a collection of records, documents, or other materials of historical interest -->
+<!-- Copyright -->
+<link rel="license" href="copyright.html">
+
+<!-- Other languages -->
+<link rel="alternate" href="https://es.example.com/" hreflang="es">
+
+<!-- Archive -->
 <link rel="archives" href="http://example.com/archives/">
 
-<!-- Links to top level resource in an hierarchical structure -->
+<!-- Top level resources -->
 <link rel="index" href="http://example.com/">
 
-<!-- Provides a self reference - useful when the document has multiple possible references -->
+<!-- Self reference -->
 <link rel="self" type="application/atom+xml" href="http://example.com/atomFeed.php?page=3">
 
-<!-- The first, next, previous, and last documents in a series of documents, respectively -->
+<!-- Series of documents -->
 <link rel="first" href="http://example.com/atomFeed.php">
 <link rel="next" href="http://example.com/atomFeed.php?page=4">
 <link rel="prev" href="http://example.com/atomFeed.php?page=2">
 <link rel="last" href="http://example.com/atomFeed.php?page=147">
 
-<!-- Used when a 3rd party service is utilized to maintain a blog -->
+<!-- Third party service -->
 <link rel="EditURI" href="http://example.com/xmlrpc.php?rsd" type="application/rsd+xml" title="RSD">
 
-<!-- Forms an automated comment when another WordPress blog links to your WordPress blog or post -->
+<!-- WordPress auto-comment -->
 <link rel="pingback" href="http://example.com/xmlrpc.php">
 
-<!-- Notifies a URL when you link to it on your document -->
+<!-- URL notification -->
 <link rel="webmention" href="http://example.com/webmention">
 
-<!-- Enables posting to your own domain using a Micropub client -->
+<!-- Micropub client -->
 <link rel="micropub" href="http://example.com/micropub">
 
-<!-- Loads in an external HTML file into the current document -->
+<!-- External HTML file loading -->
 <link rel="import" href="/path/to/component.html">
 
 <!-- Open Search -->
@@ -227,8 +227,7 @@ Valid `<head>` elements include `meta`, `link`, `title`, `style`, `script`, `nos
 <link rel="alternate" href="https://feeds.feedburner.com/example" type="application/rss+xml" title="RSS">
 <link rel="alternate" href="http://example.com/feed.atom" type="application/atom+xml" title="Atom 0.3">
 
-<!-- Prefetching, preloading, prebrowsing -->
-<!-- More info: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+<!-- Prefetching, preloading, prebrowsing (more info at https://css-tricks.com/prefetching-preloading-prebrowsing/) -->
 <link rel="dns-prefetch" href="//example.com/">
 <link rel="preconnect" href="https://www.example.com/">
 <link rel="prefetch" href="https://www.example.com/">
@@ -525,35 +524,12 @@ Since Chrome 31, you can set up your web app to "app mode" like Safari.
 
 ## Notes
 
-### Performance
-
-Moving the `href` attribute to the beginning of an element improves compression when GZIP is enabled, because the `href` attribute is used in `a`, `base`, and `link` tags.
-
-Example:
-
-``` html
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-```
-
-**[⬆ back to top](#table-of-contents)**
-
-## Other Resources
-
-- 📖 [HTML5 Boilerplate Docs: The HTML](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
-- 📖 [HTML5 Boilerplate Docs: Extend and customize](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
-
-**[⬆ back to top](#table-of-contents)**
-
-## Related Projects
+### Related Resources
 
 - [Atom HTML Head Snippets](https://github.com/joshbuchea/atom-html-head-snippets) - Atom package for `HEAD` snippets
 - [Sublime Text HTML Head Snippets](https://github.com/marcobiedermann/sublime-head-snippets) - Sublime Text package for `HEAD` snippets
 - [head-it](https://github.com/hemanth/head-it) - CLI interface for `HEAD` snippets
 - [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the `HEAD` tag for Vue.js
-
-**[⬆ back to top](#table-of-contents)**
-
-## Contributors
 
 ### Author
 
