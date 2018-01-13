@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Example](#template)
 - [Recommended Minimum](#recommended-minimum)
 - [Elements](#elements)
 - [Meta](#meta)
@@ -26,16 +27,44 @@
   - [QQ Mobile Browser](#qq-mobile-browser)
   - [UC Mobile Browser](#uc-mobile-browser)
 - [App Links](#app-links)
-- [Notes](#notes)
-  - [Performance](#performance)
-- [Other Resources](#other-resources)
-- [Related Projects](#related-projects)
-- [Other Formats](#other-formats)
-- [Translations](#translations)
-- [Contributing](#contributing)
-  - [Contributors](#contributors)
-- [Author](#author)
-- [License](#license)
+- [Other Resources](#resources)
+
+## Template
+
+```html
+<!-- Recommend minimum -->
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="A description of the page">
+<title>Page Title</title>
+<base href="http://example.com/page.html">
+
+<!-- Open graph -->
+<meta property="og:title" content="Content Title">
+<meta property="og:description" content="Description Here">
+<meta property="og:url" content="http://example.com/page.html">
+<meta property="og:site_name" content="Site Name">
+<meta property="og:image" content="http://example.com/image.jpg">
+
+<!-- Favicons (realfavicongenerator.net) in /images/
+<meta name="msapplication-config" content="/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="/images/manifest.json">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="http://example.com/styles.css">
+<style>...</style>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>...</noscript>
+```
 
 ## Recommended Minimum
 
