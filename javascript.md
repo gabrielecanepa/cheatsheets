@@ -22,6 +22,17 @@ node        # Gives a REPL to execute JS code
 # Ctrl-C twice to exit
 ```
 
+## Events
+
+### Prevent default
+
+```javascript
+document.querySelectorAll("a").addEventListener("click", function(event) {
+  event.preventDefault();
+});
+
+```
+
 ## AJAX
 
 The modern technique used to make an **AJAX GET request** is `fetch`.
