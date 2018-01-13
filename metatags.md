@@ -58,13 +58,13 @@
 <link rel="shortcut icon" href="/images/favicon.ico">
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="http://example.com/styles.css">
+<link type="text/css" rel="stylesheet" href="http://example.com/styles.css">
 <style>
   /* CSS code */
 </style>
 
 <!-- Scripts (better at the bottom of the <body>) -->
-<script src="script.js"></script>
+<script type="text/javascript" src="script.js"></script>
 <script>
   // JavaScript code
 </script>
