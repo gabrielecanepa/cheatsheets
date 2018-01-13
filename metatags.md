@@ -59,11 +59,15 @@
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="http://example.com/styles.css">
-<style>...</style>
+<style>
+  /* CSS code */
+</style>
 
-<!-- Scripts (better at the bottom of the body) -->
+<!-- Scripts (better at the bottom of the <body>) -->
 <script src="script.js"></script>
-<script>...</noscript>
+<script>
+  // JavaScript code
+</script>
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -89,7 +93,7 @@ For a complete reference [click here](https://github.com/joshbuchea/HEAD).
 Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `script` and `noscript`.
 
 ``` html
-<!-- In the head: -->
+<!-- In the <head>: -->
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -102,14 +106,20 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 
 <!-- Link -->
 <link rel="stylesheet" href="styles.css">
-<style>...</style>
+<style>
+  /* CSS code */
+</style>
 
-<!-- At the bottom of the body: -->
+<!-- At the bottom of the <body>: -->
 
 <!-- Script and Noscript -->
 <script src="script.js"></script>
-<script>...</script>
-<noscript>...</noscript>
+<script>
+  // JavaScript code
+</script>
+<noscript>
+  // No JavaScript alternative
+</noscript>
 ```
 
 **[⬆ back to top](#table-of-contents)**
