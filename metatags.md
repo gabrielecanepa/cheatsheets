@@ -2,40 +2,71 @@
 
 ## Table of Contents
 
+- [Template](#template)
 - [Recommended Minimum](#recommended-minimum)
-- [Elements](#elements)
-- [Meta](#meta)
-- [Link](#link)
-- [Favicons](#favicons)
-- [Social](#social)
-  - [Facebook Open Graph](#facebook-open-graph)
-  - [Twitter Card](#twitter-card)
-  - [Twitter Privacy](#twitter-privacy)
-  - [Google+ / Schema.org](#google--schemaorg)
-  - [Facebook Instant Articles](#facebook-instant-articles)
-  - [OEmbed](#oembed)
-- [Browsers / Platforms](#browsers--platforms)
-  - [Apple iOS](#apple-ios)
-  - [Apple Safari](#apple-safari)
-  - [Google Android](#google-android)
-  - [Google Chrome](#google-chrome)
-  - [Google Chrome Mobile (Android Only)](#google-chrome-mobile-android-only)
-  - [Microsoft Internet Explorer](#microsoft-internet-explorer)
-- [Browsers (Chinese)](#browsers-chinese)
-  - [360 Browser](#360-browser)
-  - [QQ Mobile Browser](#qq-mobile-browser)
-  - [UC Mobile Browser](#uc-mobile-browser)
-- [App Links](#app-links)
+- [In Deep](#in-deep)
+  - [Elements](#elements)
+    - [Meta](#meta)
+    - [Link](#link)
+  - [Favicons](#favicons)
+  - [Social](#social)
+    - [Facebook Open Graph](#facebook-open-graph-and-instant-articles)
+    - [Twitter Card](#twitter-card)
+    - [Google+](#google-plus)
+    - [OEmbed](#oembed)
+  - [Browsers / Platforms](#browsers--platforms)
+    - [Apple iOS](#apple-ios)
+    - [Apple Safari](#apple-safari)
+    - [Google Android](#google-android)
+    - [Google Chrome](#google-chrome)
+    - [Google Chrome Mobile (Android Only)](#google-chrome-mobile-android-only)
+    - [Microsoft Internet Explorer](#microsoft-internet-explorer)
+  - [Browsers (Chinese)](#browsers-chinese)
+    - [360 Browser](#360-browser)
+    - [QQ Mobile Browser](#qq-mobile-browser)
+    - [UC Mobile Browser](#uc-mobile-browser)
+    - [App Links](#app-links)
 - [Notes](#notes)
-  - [Performance](#performance)
-- [Other Resources](#other-resources)
-- [Related Projects](#related-projects)
-- [Other Formats](#other-formats)
-- [Translations](#translations)
-- [Contributing](#contributing)
-  - [Contributors](#contributors)
-- [Author](#author)
-- [License](#license)
+  - [Related Resources](#related-resources)
+
+## Template
+
+```html
+<!-- Recommend minimum -->
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="A description of the page">
+<title>Page Title</title>
+<base href="http://example.com/page.html">
+
+<!-- Open graph -->
+<meta property="og:title" content="Content Title">
+<meta property="og:description" content="Description Here">
+<meta property="og:url" content="http://example.com/page.html">
+<meta property="og:site_name" content="Site Name">
+<meta property="og:image" content="http://example.com/image.jpg">
+
+<!-- Favicons (realfavicongenerator.net) in /images/ -->
+<meta name="msapplication-config" content="/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="/images/manifest.json">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="http://example.com/styles.css">
+<style>...</style>
+
+<!-- Scripts (better at the bottom of the body) -->
+<script src="script.js"></script>
+<script>...</noscript>
+```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Recommended Minimum
 
@@ -43,20 +74,19 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!--
-  The above 3 meta tags *must* come first in the <head>
-  to consistently ensure proper document rendering.
-  Any other head element should come *after* these tags.
- -->
+<!-- Any other head element should come after these tags -->
 <title>Page Title</title>
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
-## Elements
+## In Deep
+
+For a complete reference [click here](https://github.com/joshbuchea/HEAD).
+
+### Elements
 
 Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `script` and `noscript`.
-
 
 ``` html
 <!-- In the head: -->
@@ -72,22 +102,19 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 
 <!-- Link -->
 <link rel="stylesheet" href="styles.css">
+<style>...</style>
 
 <!-- At the bottom of the body: -->
 
 <!-- Script and Noscript -->
 <script src="script.js"></script>
-<script>
-  // function(s) go here
-</script>
-<noscript>
-  <!-- No JS alternative -->
-</noscript>
+<script>...</script>
+<noscript>...</noscript>
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
-## Meta
+#### Meta
 
 ``` html
 <!-- Recommended minimum -->
@@ -95,13 +122,13 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!-- Control over where resources are loaded from, applied to resources that are declared after it. -->
+<!-- Resources control -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
 
-<!-- Name of web application (only if used as an app) -->
+<!-- Web application name -->
 <meta name="application-name" content="Application Name">
 
-<!-- Short description of the document (150 characters) -->
+<!-- Description -->
 <meta name="description" content="A description of the page">
 
 <!-- Search engine crawling and indexing -->
@@ -158,7 +185,7 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 
 **[⬆ back to top](#table-of-contents)**
 
-## Link
+#### Link
 
 ``` html
 <!-- External stylesheet -->
@@ -237,7 +264,7 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 
 **[⬆ back to top](#table-of-contents)**
 
-## Favicons
+### Favicons
 
 ``` html
 <link rel="icon" type="image/png" sizes="16x16" href="/path/to/favicon-16x16.png">
@@ -245,14 +272,15 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 <link rel="icon" type="image/png" sizes="96x96" href="/path/to/favicon-96x96.png">
 ```
 
-- 📖 [All About Favicons (And Touch Icons)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
-- 📖 [Favicon Cheat Sheet](https://github.com/audreyr/favicon-cheat-sheet)
+- 📖 [Favicon generator](https://realfavicongenerator.net/)
+- 📖 [All about favicons (and touch icons)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
+- 📖 [Favicon cheatsheet](https://github.com/audreyr/favicon-cheat-sheet)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Social
+### Social
 
-### Facebook Open Graph
+#### Facebook Open Graph and instant articles
 
 ``` html
 <meta property="fb:app_id" content="123456789">
@@ -266,11 +294,21 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 <meta property="article:author" content="">
 ```
 
-- 📖 [Facebook Open Graph Markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
+- 📖 [Facebook Open Graph markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
 - 📖 [Open Graph protocol](http://ogp.me/)
 - 🛠 Test your page with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
 
-### Twitter Card
+``` html
+<meta charset="utf-8">
+<meta property="op:markup_version" content="v1.0">
+<link rel="canonical" href="http://example.com/article.html">
+<meta property="fb:article_style" content="myarticlestyle">
+```
+
+- 📖 [Creating articles](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
+- 📖 [Code samples](https://developers.facebook.com/docs/instant-articles/reference)
+
+#### Twitter Card
 
 ``` html
 <meta name="twitter:card" content="summary">
@@ -285,14 +323,7 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 - 📖 [Getting started with cards — Twitter Developers](https://dev.twitter.com/cards/getting-started)
 - 🛠 Test your page with the [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 
-### Twitter Privacy
-If you embed tweets in your website, Twitter can use information from your site to tailor content and suggestions to Twitter users. [More about Twitter privacy options](https://dev.twitter.com/web/overview/privacy#what-privacy-options-do-website-publishers-have).
-``` html
-<!-- disallow Twitter from using your site's info for personalization purposes -->
-<meta name="twitter:dnt" content="on">
-```
-
-### Google+ / Schema.org
+#### Google Plus
 
 ``` html
 <link href="https://plus.google.com/+YourPage" rel="publisher">
@@ -301,66 +332,37 @@ If you embed tweets in your website, Twitter can use information from your site 
 <meta itemprop="image" content="http://example.com/image.jpg">
 ```
 
-### Pinterest
-
-Pinterest lets you prevent people from saving things from your website, according [to their help center](https://help.pinterest.com/en/articles/prevent-people-saving-things-pinterest-your-site). The `description` is optional.
+#### OEmbed
 
 ``` html
-<meta name="pinterest" content="nopin" description="Sorry, you can't save from my website!">
-```
-
-### Facebook Instant Articles
-
-``` html
-<meta charset="utf-8">
-<meta property="op:markup_version" content="v1.0">
-
-<!-- The URL of the web version of your article -->
-<link rel="canonical" href="http://example.com/article.html">
-
-<!-- The style to be used for this article -->
-<meta property="fb:article_style" content="myarticlestyle">
-```
-
-- 📖 [Creating Articles - Instant Articles](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
-- 📖 [Code Samples - Instant Articles](https://developers.facebook.com/docs/instant-articles/reference)
-
-### OEmbed
-
-``` html
-<link rel="alternate" type="application/json+oembed"
-  href="http://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&amp;format=json"
-  title="oEmbed Profile: JSON">
-<link rel="alternate" type="text/xml+oembed"
-  href="http://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&amp;format=xml"
-  title="oEmbed Profile: XML">
+<link rel="alternate" type="application/json+oembed" href="http://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&amp;format=json" title="oEmbed Profile: JSON">
+<link rel="alternate" type="text/xml+oembed" href="http://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F&amp;format=xml" title="oEmbed Profile: XML">
 ```
 
 - 📖 [oEmbed format](http://oembed.com/)
 
 **[⬆ back to top](#table-of-contents)**
 
-## Browsers / Platforms
+### Browsers / Platforms
 
-### Apple iOS
+#### Apple iOS
 
 ``` html
 <!-- Smart App Banner -->
 <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
 
-<!-- Disable automatic detection and formatting of possible phone numbers -->
+<!-- Phone numbers -->
 <meta name="format-detection" content="telephone=no">
 
-<!-- Add to Home Screen -->
+<!-- Home screen -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="App Title">
 
-<!-- Touch Icons -->
-<!-- In most cases, one 180×180px touch icon in the head is enough -->
+<!-- Touch icon -->
 <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
 
-<!-- Startup Image ( Deprecated ) -->
+<!-- Startup image (deprecated) -->
 <link rel="apple-touch-startup-image" href="/path/to/startup.png">
 
 <!-- iOS app deep linking -->
@@ -370,64 +372,63 @@ Pinterest lets you prevent people from saving things from your website, accordin
 
 - 📖 [Apple Meta Tags](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 
-### Apple Safari
+#### Apple Safari
 
 ```html
 <!-- Pinned Site -->
 <link rel="mask-icon" href="/path/to/icon.svg" color="red">
 ```
 
-### Google Android
+#### Google Android
 
 ``` html
 <meta name="theme-color" content="#E64545">
 
 <!-- Add to home screen -->
 <meta name="mobile-web-app-capable" content="yes">
-<!-- More info: https://developer.chrome.com/multidevice/android/installtohomescreen -->
 
 <!-- Android app deep linking -->
 <meta name="google-play-app" content="app-id=package-name">
 <link rel="alternate" href="android-app://package-name/http/url-sample.com">
 ```
 
-### Google Chrome
+- 📖 [Install to Android home screen](https://developer.chrome.com/multidevice/android/installtohomescreen)
+
+#### Google Chrome
 
 ``` html
 <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/APP_ID">
 
-<!-- Disable translation prompt -->
+<!-- Prompt -->
 <meta name="google" content="notranslate">
 ```
 
-### Google Chrome Mobile (Android Only)
+#### Google Chrome Mobile (Android Only)
 
-Since Chrome 31, you can set up your web app to "app mode" like Safari.
 
 ``` html
-<!-- Link to a manifest and define the manifest metadata -->
-<!-- The example of manifest.json could be found in the link below -->
+<!-- Mainfest -->
 <link rel="manifest" href="manifest.json">
 
-<!-- Define your web page as a web app -->
+<!-- Define web app -->
 <meta name="mobile-web-app-capable" content="yes">
 
-<!-- Homescreen Icon -->
+<!-- Homescreen icon -->
 <link rel="icon" sizes="192x192" href="/path/to/highres-icon.png">
 ```
 
 - 📖 [Add to Homescreen - Google Chrome](https://developer.chrome.com/multidevice/android/installtohomescreen)
 
-### Microsoft Internet Explorer
+#### Microsoft Internet Explorer
 
 ``` html
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
 
-<!-- IE10: Disable link highlighting upon tap (https://blogs.windows.com/buildingapps/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10/) -->
+<!-- Link highlightning -->
 <meta name="msapplication-tap-highlight" content="no">
 
-<!-- Pinned sites (https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx) -->
+<!-- Pinned sites  -->
 <meta name="application-name" content="Sample Title">
 <meta name="msapplication-tooltip" content="A description of what this site does.">
 <meta name="msapplication-starturl" content="http://example.com/index.html?pinned=true">
@@ -438,15 +439,12 @@ Since Chrome 31, you can set up your web app to "app mode" like Safari.
 <meta name="msapplication-badge" value="frequency=NUMBER_IN_MINUTES;polling-uri=http://example.com/path/to/file.xml">
 <meta name="msapplication-TileColor" content="#FF3300">
 <meta name="msapplication-TileImage" content="/path/to/tileimage.jpg">
-
 <meta name="msapplication-config" content="http://example.com/browserconfig.xml">
 <meta name="msapplication-notification" content="frequency=60;polling-uri=http://example.com/livetile;polling-uri2=http://example.com/livetile2">
 <meta name="msapplication-task-separator" content="1">
 ```
 
-**[⬆ back to top](#table-of-contents)**
-
-## App Links
+#### App Links
 
 ``` html
 <!-- iOS -->
@@ -467,50 +465,50 @@ Since Chrome 31, you can set up your web app to "app mode" like Safari.
 
 **[⬆ back to top](#table-of-contents)**
 
-## Browsers (Chinese)
+### Browsers (Chinese)
 
-### 360 Browser
+#### 360 Browser
 
 ``` html
-<!-- Select rendering engine order -->
+<!-- Engine order -->
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 ```
 
-### QQ Mobile Browser
+#### QQ Mobile Browser
 
 ``` html
-<!-- Locks the screen into the specified orientation -->
+<!-- Orientation -->
 <meta name="x5-orientation" content="landscape/portrait">
 
-<!-- Display this document in fullscreen -->
+<!-- Fullscreen -->
 <meta name="x5-fullscreen" content="true">
 
-<!-- Document will be displayed in "application mode" (fullscreen, etc.) -->
+<!-- Application mode -->
 <meta name="x5-page-mode" content="app">
 ```
 
-### UC Mobile Browser
+#### UC Mobile Browser
 
 ``` html
-<!-- Locks the screen into the specified orientation -->
+<!-- Orientation -->
 <meta name="screen-orientation" content="landscape/portrait">
 
-<!-- Display this document in fullscreen -->
+<!-- Fullscreen -->
 <meta name="full-screen" content="yes">
 
-<!-- UC browser will display images even if in "text mode" -->
+<!-- Images in text mode -->
 <meta name="imagemode" content="force">
 
-<!-- Document will be displayed in "application mode"(fullscreen, forbidding gesture, etc.) -->
+<!-- Application mode -->
 <meta name="browsermode" content="application">
 
-<!-- Disabled the UC browser's "night mode" for this document -->
+<!-- Disabled night mode -->
 <meta name="nightmode" content="disable">
 
-<!-- Simplify the document to reduce data transfer -->
+<!-- Simplify the document -->
 <meta name="layoutmode" content="fitscreen">
 
-<!-- Disable the UC browser's feature of "scaling font up when there are many words in this document" -->
+<!-- Scaling fonts -->
 <meta name="wap-font-scale" content="no">
 ```
 
@@ -526,9 +524,5 @@ Since Chrome 31, you can set up your web app to "app mode" like Safari.
 - [Sublime Text HTML Head Snippets](https://github.com/marcobiedermann/sublime-head-snippets) - Sublime Text package for `HEAD` snippets
 - [head-it](https://github.com/hemanth/head-it) - CLI interface for `HEAD` snippets
 - [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the `HEAD` tag for Vue.js
-
-### Author
-
-**[Josh Buchea](https://joshbuchea.com/)**, full version on [Github](https://github.com/joshbuchea/HEAD/blob/master/README.md#meta).
 
 **[⬆ back to top](#table-of-contents)**
