@@ -24,7 +24,7 @@ node        # Gives a REPL to execute JS code
 
 ## Events
 
-### Prevent default
+### preventDefault()
 
 ```javascript
 document.querySelectorAll("a").addEventListener("click", function(event) {
