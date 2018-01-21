@@ -47,15 +47,15 @@
 <meta property="og:site_name" content="Site Name">
 <meta property="og:image" content="http://example.com/image.jpg">
 
-<!-- Favicons (realfavicongenerator.net) in /images/ -->
-<meta name="msapplication-config" content="/images/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+<!-- Favicons (realfavicongenerator.net) -->
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 <link rel="manifest" href="/images/manifest.json">
 <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
 <link rel="shortcut icon" href="/images/favicon.ico">
+<meta name="msapplication-config" content="/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 <!-- Stylesheets -->
 <link type="text/css" rel="stylesheet" href="http://example.com/styles.css">
