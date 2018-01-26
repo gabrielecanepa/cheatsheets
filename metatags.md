@@ -48,7 +48,7 @@
         <meta property="og:description" content="Description Here">
         <meta property="og:url" content="http://example.com/page.html">
         <meta property="og:site_name" content="Site Name">
-        <meta property="og:image" content="http://example.com/image.jpg">
+        <meta property="og:image" content="http://example.com/image.jpg"> <!-- 1200x630 -->
 
         <!-- Favicons (realfavicongenerator.net) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
