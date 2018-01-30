@@ -36,20 +36,24 @@
 <html>
     <head>
         <!-- Recommend minimum -->
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="A description of the page">
         <title>Page Title</title>
-        <base href="http://example.com/page.html">
-
         <!-- Open graph -->
-        <meta property="og:title" content="Content Title">
-        <meta property="og:description" content="Description Here">
-        <meta property="og:url" content="http://example.com/page.html">
-        <meta property="og:site_name" content="Site Name">
+        <meta property="og:title" content="Page Title">
+        <meta property="og:description" content="Page description">
+        <meta property="og:site_name" content="Website name">
         <meta property="og:image" content="http://example.com/image.jpg"> <!-- 1200x630 -->
-
+        <meta property="og:url" content="http://example.com/page.html">
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="card_name">
+        <meta name="twitter:site" content="Webasite name">
+        <meta name="twitter:title" content="Page Title">
+        <meta name="twitter:description" content="Page description">
+        <meta name="twitter:creator" content="Creator name">
+        <meta name="twitter:image:src" content="http://example.com/image.jpg">
         <!-- Favicons (realfavicongenerator.net) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -59,7 +63,6 @@
         <link rel="shortcut icon" href="/images/favicon.ico">
         <meta name="msapplication-config" content="/images/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
-
         <!-- Stylesheets -->
         <link type="text/css" rel="stylesheet" href="http://example.com/styles.css">
         <style>
@@ -68,7 +71,6 @@
     </head>
 
     <body>
-        <!-- Scripts (better at the bottom of <body>) -->
         <script type="text/javascript" src="script.js"></script>
         <script>
           // JavaScript code
@@ -77,7 +79,7 @@
 </html>
 ```
 
-**[⬆ back to top](#table-of-contents)**
+[↑ back to top](#table-of-contents)
 
 ## Recommended Minimum
 
@@ -89,7 +91,7 @@
 <title>Page Title</title>
 ```
 
-**[⬆ back to top](#table-of-contents)**
+[↑ back to top](#table-of-contents)
 
 ## Elements
 
@@ -125,7 +127,7 @@ Valid `<head>` elements include `meta`, `title`, `base`, `link`, `style`, `scrip
 </noscript>
 ```
 
-**[⬆ back to top](#table-of-contents)**
+[↑ back to top](#table-of-contents)
 
 ## In Deep
 
@@ -521,7 +523,7 @@ For a complete reference [click here](https://github.com/joshbuchea/HEAD).
 
 - 📖 [UC Browser Docs](http://www.uc.cn/download/UCBrowser_U3_API.doc)
 
-**[⬆ back to top](#table-of-contents)**
+[↑ back to top](#table-of-contents)
 
 ## Notes
 
@@ -532,4 +534,4 @@ For a complete reference [click here](https://github.com/joshbuchea/HEAD).
 - [head-it](https://github.com/hemanth/head-it) - CLI interface for `HEAD` snippets
 - [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the `HEAD` tag for Vue.js
 
-**[⬆ back to top](#table-of-contents)**
+[↑ back to top](#table-of-contents)
