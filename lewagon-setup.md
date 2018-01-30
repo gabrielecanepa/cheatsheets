@@ -1,16 +1,22 @@
 # Le Wagon Setup
 
+## Table of Contents
 
-# Setup instructions
-
-The following instructions will help you to get ready for [Le Wagon](http://www.lewagon.org) fullstack bootcamp:
-
-- Grab a text editor
-- Install a package manager
-- Pimp your Terminal
-- Setup git and GitHub
-- Install Ruby
-- Connect to Kitt
+- [Command Line Tools](#command-line-tools)
+- [Homebrew](#homebrew)
+- [Sublime Text](#sublime-text)
+- [Terminal](#terminal)
+- [Github and SHH Passphrase](#github-and-shh-passphrase)
+- [Dotfiles](#dotfiles)
+- [Ruby](#ruby)
+  - [Install Gems](#install-gems)
+- [PostgreSQL](#postgresql)
+- [Security and Access](#security-and-access)
+  - [Security](#security)
+  - [Keyboard](#keyboard)
+  - [macOS For Hackers](#macos-for-hackers)
+- [Test](#test)
+- [Kitt](#kitt)
 
 
 ## Command Line Tools
@@ -36,6 +42,7 @@ Accept and wait. If it fails, try again the command line above, sometimes the Ap
 
 ![](images/xcode-select-install.png)
 
+[↑ back to top](#table-of-contents)
 
 ## Homebrew
 
@@ -75,8 +82,9 @@ install_or_upgrade "jq"
 install_or_upgrade "openssl"
 ```
 
+[↑ back to top](#table-of-contents)
 
-## Sublime Text 3 - Your text editor
+## Sublime Text
 
 A text editor is one of the most important tools of a developer. Go to [this page](http://www.sublimetext.com/3) and download **Sublime Text 3** for OS X. Install it (double click the downloaded file and drag & drop the app **into** the `Applications` folder, **don't skip this**). If you had Sublime Text 2 installed before, please uninstall it (by dragging/dropping it to the Trash).
 
@@ -84,8 +92,31 @@ Sublime Text is free without any time limitation but a popup will appear every t
 
 Again, make sure that Sublime Text is there, not in the disk image you downloaded. To make sure it's correct, once Sublime Text is installed, unmount the "Sublime Text 3" disk in the left panel of Finder. Finder will complain if something went wrong. Ask a teacher.
 
+To configure Sublime Text open a new terminal and type this:
 
-## Oh-my-zsh - Fancy your Terminal
+```bash
+stt
+```
+
+It will **open Sublime Text in the context of your current folder**. That's how we'll use it.
+
+**Close Sublime text** and open it again:
+
+```bash
+stt
+```
+
+**Wait 1 minute** for additional packages to be automatically installed (New tabs with text will automatically open, containing documentation for each new package installed). TO follow package installation, you can go to `View > Show console`.
+
+To check if plugins are installed, open the Command Palette (`⌘` + `⇧` + `P` on OSX, `Ctrl` + `⇧` + `P` on Linux), type in `Packlist` and then `Enter`, you should see a couple of packages installed (like [Emmet](http://emmet.io/)).
+
+If you don't, please install all of them manually. The list is referenced [here](https://github.com/lewagon/dotfiles/blob/master/Package%20Control.sublime-settings).
+
+When it's done, you can close Sublime Text.
+
+[↑ back to top](#table-of-contents)
+
+## Terminal
 
 Use the shell named `zsh` instead of `bash`, the default one.
 
@@ -110,8 +141,9 @@ You should see something like this:
 
 ![](images/on-my-zsh.png)
 
+[↑ back to top](#table-of-contents)
 
-## GitHub
+## GitHub and SHH Passphrase
 
 We need to generate SSH keys which are going to be used by GitHub and Heroku
 to authenticate you. Think of it as a way to log in, but different from the
@@ -160,8 +192,24 @@ ssh-add ~/.ssh/id_ed25519
 
 [Read this article](http://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html) to get a better understanding of what those keys are used for.
 
+In order not to re-type your SSH passphrase at every `git push`, you can add these lines to the `~/.ssh/config` file:
 
-## Dotfiles (Standard configuration)
+```bash
+touch ~/.ssh/config  # Creates the file if it does not exist
+st ~/.ssh/config     # Opens the file in Sublime text
+```
+
+And then add these 3 lines to the file. **Save**.
+
+```bash
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+```
+
+[↑ back to top](#table-of-contents)
+
+## Dotfiles
 
 Hackers love to refine and polish their shell and tools. 
 Start with a great default configuration provided by [Le Wagon](http://github.com/lewagon/dotfiles), stored on GitHub. As your configuration is personal, you need your own repository storing it, so you first need to fork it to your GitHub account.
@@ -201,51 +249,9 @@ Be careful, you **need** to put the **same** email as the one you sign up with o
 
 Please now **quit** all your opened terminal windows.
 
+[↑ back to top](#table-of-contents)
 
-### Sublime Text auto-configuration
-
-Open a new terminal and type this:
-
-```bash
-stt
-```
-
-It will **open Sublime Text in the context of your current folder**. That's how we'll use it.
-
-**Close Sublime text** and open it again:
-
-```bash
-stt
-```
-
-**Wait 1 minute** for additional packages to be automatically installed (New tabs with text will automatically open, containing documentation for each new package installed). TO follow package installation, you can go to `View > Show console`.
-
-To check if plugins are installed, open the Command Palette (`⌘` + `⇧` + `P` on OSX, `Ctrl` + `⇧` + `P` on Linux), type in `Packlist` and then `Enter`, you should see a couple of packages installed (like [Emmet](http://emmet.io/)).
-
-If you don't, please install all of them manually. The list is referenced [here](https://github.com/lewagon/dotfiles/blob/master/Package%20Control.sublime-settings).
-
-When it's done, you can close Sublime Text.
-
-
-### SSH Passphrase
-
-In order not to re-type your SSH passphrase at every `git push`, you can add these lines to the `~/.ssh/config` file:
-
-```bash
-touch ~/.ssh/config  # Creates the file if it does not exist
-st ~/.ssh/config     # Opens the file in Sublime text
-```
-
-And then add these 3 lines to the file. **Save**.
-
-```bash
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-```
-
-
-## Installing Ruby (with [rbenv](https://github.com/sstephenson/rbenv))
+## Ruby
 
 First we need to clean up any previous Ruby installation you might have:
 
@@ -295,8 +301,7 @@ ruby -v
 
 You should see something starting with `ruby 2.4.3p`. If not, ask a teacher.
 
-
-## Installing some gems
+### Install Gems
 
 All, please run the following line:
 
@@ -306,10 +311,11 @@ gem install rake bundler rspec rubocop pry pry-byebug hub colored octokit
 
 **Never install a gem with `sudo gem install`!** Even if you stumble upon a Stackoverflow answer (or the Terminal) telling you to do so.
 
+[↑ back to top](#table-of-contents)
 
-## Postgresql
+## PostgreSQL
 
-Postgresql is an open-source robust and production-ready database. Let's install it now.
+PostgreSQL is an open-source robust and production-ready database. Let's install it now.
 
 ```bash
 brew install postgresql
@@ -333,55 +339,35 @@ postgres=#
 
 To quit it, type `\q` then `Enter`.
 
+[↑ back to top](#table-of-contents)
 
-## Security
+## Security and Access
 
-It is mandataory that you protect your session behind a password. If it is not already the case, go to ` > System Preferences > Users & Groups`, and change your account password. You should also go to ` > System Preferences > Security > General`. You should require a password `5 seconds` after sleep or screen saver begins.
+### Security
+
+It is essential that you protect your session behind a password. If it is not already the case, go to ` > System Preferences > Users & Groups`, and change your account password. You should also go to ` > System Preferences > Security > General`. You should require a password `5 seconds` after sleep or screen saver begins.
 
 You can also go to ` > System Preferences > Mission Control`, and click on the `Hot Corners` button at the bottom left. Choose for the bottom right corner to start the screen saver. That way, when you leave your desk, you can quickly lock you screen by putting your mouse in the bottom right corner. 5 seconds after, your Macbook will be locked and will ask for a password to get back on the session.
 
-
-## Check-up
-
-Let's check if you successfully installed everything.
-
-Quit all opened Terminal, open a new one and run the following commands:
-
-```bash
-curl -Ls https://raw.githubusercontent.com/lewagon/setup/master/check.rb > _.rb && ruby _.rb || rm _.rb
-```
-
-It should tell you if your workstation is ready.
-
-
-## Kitt
-
-To enroll in a batch as a student open a new terminal and run the following commands, changing the address with the batch number and your Github username:
-
-```bash
-curl -s https://kitt.lewagon.com/camps/<batch_number>/setup_script/<github_username> | bash
-```
-
-
-## Keyboard
+### Keyboard
 
 As you become a programer, you'll understand that leaving the keyboard takes a lot of time,
 so you'll want to minimize using the trackpad or the mouse. Here are a few tricks on OSX
 to help you do that:
 
-### Keyboard speed
+#### Keyboard Speed
 
 Go to  > System Preferences > Keyboard. Set `Key Repeat` to the fastest position (to the right) and
 `Delay Until Repeat` to the shortest position (to the right).
 
-### Full Keyboard Access
+#### Full Keyboard Access
 
 Go to  > System Preferences > Keyboard. Click on the third tab (Shortcuts). At the bottom of the
 pane, click the radio button `All controls`. This way when you get a dialog with several options,
 you'll be able to type `Enter` to confirm, or `Space` to choose the cancel option. If you have more than
 two options, you can use tab to circle between them.
 
-### macOS For hackers
+### macOS For Hackers
 
 [Read this script](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and cherry-pick some stuff you think will suit you.
 For instance, you can type in the terminal this one:
@@ -397,4 +383,30 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
 # etc..
 ```
+
+[↑ back to top](#table-of-contents)
+
+## Test
+
+Let's check if you successfully installed everything.
+
+Quit all opened Terminal, open a new one and run the following commands:
+
+```bash
+curl -Ls https://raw.githubusercontent.com/lewagon/setup/master/check.rb > _.rb && ruby _.rb || rm _.rb
+```
+
+It should tell you if your workstation is ready.
+
+[↑ back to top](#table-of-contents)
+
+## Kitt
+
+To enroll in a batch as a student open a new terminal and run the following commands, changing the address with the batch number and your Github username:
+
+```bash
+curl -s https://kitt.lewagon.com/camps/<batch_number>/setup_script/<github_username> | bash
+```
+
+[↑ back to top](#table-of-contents)
 
