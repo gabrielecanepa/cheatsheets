@@ -6,6 +6,7 @@
 
 - [Flexbox](flexbox.md)
 - [CSS Grid](css-grid.md)
+- [Metatags](metatags.md)
 
 ### Languages
 
