@@ -33,43 +33,52 @@
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Recommend minimum -->
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
     <title>Page Title</title>
-    <meta name="description" content="A description of the page">
+    <meta name="description" content="A description of the page.">
     <!-- Open graph -->
     <meta property="og:title" content="Page Title">
-    <meta property="og:description" content="Page description">
-    <meta property="og:site_name" content="Website name">
+    <meta property="og:description" content="A description of the page.">
+    <meta property="og:site_name" content="Website Name">
     <meta property="og:image" content="http://example.com/image.jpg"> <!-- 1200x630 -->
     <meta property="og:url" content="http://example.com/page.html">
     <!-- Twitter Cards -->
-    <meta name="twitter:card" content="card_name">
-    <meta name="twitter:site" content="Webasite name">
     <meta name="twitter:title" content="Page Title">
-    <meta name="twitter:description" content="Page description">
-    <meta name="twitter:creator" content="Creator name">
-    <meta name="twitter:image:src" content="http://example.com/image.jpg">
-    <!-- Favicons (realfavicongenerator.net) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="manifest" href="/images/manifest.json">
-    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="twitter:description" content="A description of the page.">
+    <meta name="twitter:site" content="Website Name">
+    <meta name="twitter:image:src" content="http://example.com/image.jpg"> <!-- 800x418 or 800x800 -->
+    <meta name="twitter:creator" content="Author Name">
+    <meta name="twitter:card" content="card-name">
+    <!-- Favicons (using realfavicongenerator.net, with package placed in images/favicons) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <!-- Stylesheets and libraries -->
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <!-- External libraries -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link href="style.css" rel="stylesheet">
   </head>
 
   <body>
+
+    <!-- External scripts -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <!-- Scripts -->
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
 ```
