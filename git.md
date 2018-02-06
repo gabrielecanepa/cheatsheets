@@ -1,7 +1,6 @@
 # Git
 
 
-
 Setup
 -----------
 
@@ -388,7 +387,9 @@ Install: `brew install git-lfs`
 
 Track `*.psd` files: `git lfs track "*.psd"` (init, add, commit and push as written above)
 
-## Resources
+
+Resources
+-----------
 
 Related Pro Tips: https://ochronus.com/git-tips-from-the-trenches/
 
