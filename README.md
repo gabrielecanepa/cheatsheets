@@ -16,4 +16,5 @@
 ### System
 
 - [Terminal](terminal.md)
+- [Git](git.md)
 - [Shortcuts](shortcuts.md)

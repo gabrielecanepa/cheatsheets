@@ -1,4 +1,4 @@
-# Flexbox Cheatsheet
+# Flexbox
 
 The [**CSS3 Flexible Box**](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), or flexbox, is a layout mode intended to accommodate different screen sizes and different display devices.
 
