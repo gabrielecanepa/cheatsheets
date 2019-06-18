@@ -8,4 +8,4 @@
 - [JavaScript](javascript.md)
 - [Markdown](markdown.md)
 - [Metatags](metatags.md)
-- [Shortcuts](shortcuts.md)
+- [Terminal](terminal.md)
