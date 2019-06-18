@@ -2,19 +2,10 @@
 
 ## Content
 
-### Front-End
-
-- [Flexbox](flexbox.md)
 - [CSS Grid](css-grid.md)
-- [Metatags](metatags.md)
-
-### Languages
-
+- [Flexbox](flexbox.md)
+- [Git](git.md)
 - [JavaScript](javascript.md)
 - [Markdown](markdown.md)
-
-### System
-
-- [Terminal](terminal.md)
-- [Git](git.md)
+- [Metatags](metatags.md)
 - [Shortcuts](shortcuts.md)
