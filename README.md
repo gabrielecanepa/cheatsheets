@@ -11,4 +11,4 @@
 - [JavaScript](javascript.md)
 - [Markdown](markdown.md)
 - [Metatags](metatags.md)
-- [Terminal](terminal.md)
+- [Shell](shell.md)
