@@ -1,8 +1,4 @@
-# Cheatsheets
-
-📝 A collection of personal cheatsheets.
-
-## Content
+## Cheatsheets
 
 - [Binary](binary.md)
 - [CSS Grid](css-grid.md)
